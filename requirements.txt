@@ -1,0 +1,18 @@
+# AI Virtual Gym Trainer - Python Dependencies
+# Pinned versions for reproducible builds
+
+# Core web framework
+streamlit>=1.32.0,<1.33.0
+
+# Computer vision & pose detection
+opencv-python-headless>=4.9.0,<4.10.0
+mediapipe>=0.10.10,<0.11.0
+
+# Image processing
+pillow>=10.2.0,<11.0.0
+
+# Numerical computing
+numpy>=1.26.0,<1.27.0
+
+# Data handling (for export features)
+pandas>=2.1.0,<2.2.0

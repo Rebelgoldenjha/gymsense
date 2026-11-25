@@ -1,0 +1,8 @@
+# System dependencies for Streamlit Cloud
+# OpenCV headless and MediaPipe require these
+libgl1-mesa-glx
+libglib2.0-0
+libsm6
+libxext6
+libxrender-dev
+libgomp1

@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Docker
+.docker/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# SSL certificates
+ssl/
+
+# Data exports (optional - uncomment to ignore)
+# *.csv
+# *.json
+
+# MediaPipe cache
+~/.mediapipe/
+
+# Temporary files
+*.tmp
+*.temp

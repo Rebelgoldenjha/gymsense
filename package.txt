@@ -1,0 +1,4 @@
+# System dependencies for Streamlit Cloud
+# OpenCV headless requires these
+libgl1-mesa-glx
+libglib2.0-0

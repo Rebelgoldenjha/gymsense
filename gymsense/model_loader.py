@@ -40,12 +40,17 @@ def ensure_model():
 
 
 def create_pose_landmarker():
-    """Create a configured MediaPipe PoseLandmarker in VIDEO running mode."""
+    """Create a configured MediaPipe PoseLandmarker in VIDEO running mode (CPU only)."""
     ok, err = ensure_model()
     if not ok:
         return None, err
     try:
-        base_opts = base_options_module.BaseOptions(model_asset_path=CONFIG.model_path)
+        # Force CPU delegate so MediaPipe never tries to open libEGL / GPU libs
+        # on headless cloud servers (Streamlit Cloud, Docker without GPU).
+        base_opts = base_options_module.BaseOptions(
+            model_asset_path=CONFIG.model_path,
+            delegate=base_options_module.BaseOptions.Delegate.CPU,
+        )
         opts = PoseLandmarkerOptions(
             base_options=base_opts,
             running_mode=RunningMode.VIDEO,

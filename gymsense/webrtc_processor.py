@@ -16,7 +16,22 @@ from gymsense.model_loader import create_pose_landmarker, draw_landmarks
 from gymsense.pose_analyzer import ANALYZERS, get_points_from_landmarks, initial_stage_for
 
 RTC_CONFIGURATION = RTCConfiguration(
-    {"iceServers": [{"urls": [CONFIG.stun_url]}]}
+    {
+        "iceServers": [
+            # Multiple public STUN servers for reliability
+            {"urls": ["stun:stun.l.google.com:19302"]},
+            {"urls": ["stun:stun1.l.google.com:19302"]},
+            {"urls": ["stun:stun2.l.google.com:19302"]},
+            {"urls": ["stun:stun3.l.google.com:19302"]},
+            {"urls": ["stun:stun4.l.google.com:19302"]},
+            {"urls": ["stun:global.stun.twilio.com:3478"]},
+            {"urls": ["stun:stun.cloudflare.com:3478"]},
+        ],
+        "iceTransportPolicy": "all",
+        "bundlePolicy": "max-bundle",
+        "rtcpMuxPolicy": "require",
+        "iceCandidatePoolSize": 10,
+    }
 )
 
 

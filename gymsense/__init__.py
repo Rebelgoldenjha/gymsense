@@ -1,0 +1,1 @@
+"""GYMSENSE core package."""

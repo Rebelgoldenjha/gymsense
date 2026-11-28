@@ -1,43 +1,22 @@
-# Streamlit Configuration for AI Virtual Gym Trainer
-
 [server]
 headless = true
 address = "0.0.0.0"
 port = 8501
-enableCORS = false
 enableXsrfProtection = true
 maxUploadSize = 50
 maxMessageSize = 50
 
 [browser]
 gatherUsageStats = false
-serverAddress = "localhost"
-serverPort = 8501
 
 [theme]
 base = "dark"
 primaryColor = "#e94560"
-backgroundColor = "#0f0f1a"
-secondaryBackgroundColor = "#1a1a2e"
-textColor = "#f1f1f1"
+backgroundColor = "#0a0a0f"
+secondaryBackgroundColor = "#1a1a24"
+textColor = "#f0f0f5"
 font = "sans serif"
-
-[runner]
-magicEnabled = true
-installTracer = false
-fixMatplotlib = true
-
-[logger]
-level = "info"
-messageFormat = "%(asctime)s %(levelname)s %(name)s %(message)s"
 
 [client]
 toolbarMode = "minimal"
 showErrorDetails = false
-
-[deprecation]
-showPyplotGlobalUse = false
-showfileUploaderEncoding = false
-
-[global]
-disableWatchdogWarning = true
